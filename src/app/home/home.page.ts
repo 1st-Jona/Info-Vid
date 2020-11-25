@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import { Product } from '../models/product';
+import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private router: Router) { }
+  openProducts(){
+    this.router.navigate(['/products']);
+  }
+  openCar(){
+    this.router.navigate(['/car']);
+  }
 }

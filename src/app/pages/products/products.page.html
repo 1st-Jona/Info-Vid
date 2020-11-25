@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-row>
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <ion-title>Productos</ion-title>
+        </ion-row>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let product of products; index as i">
+        <div id=content>
+            <img src="{{product.photo}}">
+            <div>
+                <h1 id="name">{{product.name}}</h1>
+                <div>
+                    <h1 id="description">{{product.description}}</h1>
+                    <h1 id="cost">Precio: ${{product.cost}} MXN</h1>
+                    <ion-button size="large" color="light" (click)="showAlert(i);">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        Agregar
+                    </ion-button>
+                    <ion-button size="large">
+                        <ion-icon name="bag-check-outline"></ion-icon>
+                        Comprar
+                    </ion-button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </ion-card>
+
+
+</ion-content>

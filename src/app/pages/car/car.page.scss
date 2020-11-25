@@ -1,0 +1,49 @@
+img {
+    width: 20%;
+    height: 20%;
+}
+
+ion-icon {
+    font-size: 200%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#icono {
+    font-size: 200%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: #FF6B07;
+}
+
+#resumen {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    display: grid;
+}
+
+ion-card {
+    padding-bottom: 4%;
+}
+
+#content {
+    align-items: center;
+    width: auto;
+    display: flex;
+}
+
+#name {
+    font-size: 200%;
+    color: black;
+}
+
+#cost {
+    font-size: 100%;
+    color: black;
+}
+
+#description {
+    font-size: 100%;
+}

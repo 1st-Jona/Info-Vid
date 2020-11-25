@@ -1,20 +1,40 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-row>
+            <ion-icon name="pricetags-outline" id="iconTitle"></ion-icon>
+            <ion-title>
+                Bienvenido
+            </ion-title>
+        </ion-row>
+
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div id=buttons>
+
+        <ion-button size="large" (click)=openProducts()>
+            <div>
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <p>Productos</p>
+            </div>
+        </ion-button>
+        <img src="https://image.freepik.com/vector-gratis/tienda-online-tienda-comercio-electronico-venta-msacot-logo-lindo_8169-157.jpg" alt="">
+        <ion-button size="large" color="light" (click)=openCar()>
+            <div>
+                <ion-icon name="cart-outline"></ion-icon>
+                <p>Carrito</p>
+            </div>
+        </ion-button>
+
+
+    </div>
+
+
+
+
+
+
+
 </ion-content>
