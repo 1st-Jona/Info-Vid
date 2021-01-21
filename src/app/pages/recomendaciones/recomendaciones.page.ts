@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecomendacionService } from '../../services/recomendacion.service';
 import { Recomendacion } from '../../models/recomendacion';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recomendaciones',
@@ -11,7 +11,7 @@ import { Recomendacion } from '../../models/recomendacion';
 export class RecomendacionesPage implements OnInit {
 
   public recomendacion: Recomendacion[];
-  constructor(private service:RecomendacionService) { 
+  constructor(private service:RecomendacionService,private r:Router) { 
   
 
     this.service.getRecomendacion().subscribe(data =>{
@@ -26,6 +26,9 @@ export class RecomendacionesPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+  openNewRecomendacion(){
+    this.r.navigate(['/new-recomendacion']);
   }
 
 }

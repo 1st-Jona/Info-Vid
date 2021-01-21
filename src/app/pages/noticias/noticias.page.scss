@@ -1,29 +1,20 @@
-.Titulo {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #051F5C;
-    border-radius: 5px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
+.cardNoticias {
+    --background: #E2C0FC;
+    margin: 5%;
+}
+
+.baseNoticias {
+    --background: #662D91;
     color: white;
-    margin-left: 1em;
-    font-weight: bold;
-}
-
-.Texto {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: justify;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.Fecha {
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 1em;
 }
 
 img {
-    width: 45%;
     float: left;
+    width: 50%;
     margin: 1pc;
+}
+
+h1 {
+    font-size: 100%;
+    color: black;
 }

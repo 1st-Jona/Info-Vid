@@ -20,4 +20,13 @@ export class InformationPage implements OnInit {
   openSintomas(){
     this.router.navigate(['/sintomas']);
   }
+
+  openRecomendaciones(){
+    this.router.navigate(['/recomendaciones']);
+  }
+
+  
+  openSobreCovid(){
+    this.router.navigate(['/sobre-covid']);
+  }
 }

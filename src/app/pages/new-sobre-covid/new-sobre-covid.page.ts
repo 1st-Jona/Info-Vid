@@ -20,4 +20,13 @@ export class NewSobreCovidPage implements OnInit {
     });
   }
 
+  create(){
+    this.sobreCovid = {
+      titulo: this.myForm.controls.titulo.value,
+      descripcion:this.myForm.controls.descripcion.value,
+      imagen:this.myForm.controls.imagen.value
+    }
+    this.sobreCovidService.createSobreCovid(this.sobreCovid);
+  }
+
 }

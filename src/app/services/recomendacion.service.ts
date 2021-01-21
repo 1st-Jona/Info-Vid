@@ -10,9 +10,9 @@ export class RecomendacionService {
   constructor(private firestore:AngularFirestore) { }
 
   createRecomendacion(recomendacion: Recomendacion){
-    return this.firestore.collection('recomendacion').add(recomendacion);
+    return this.firestore.collection('recomendaciones').add(recomendacion);
   }
   getRecomendacion(){
-    return this.firestore.collection('recomendacion').snapshotChanges();
+    return this.firestore.collection('recomendaciones').snapshotChanges();
   }
 }

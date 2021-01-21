@@ -8,24 +8,42 @@
 
 <ion-content>
 
-    <ion-card *ngFor="let notice of notices; index as i;">
-        <h1 class="Titulo">{{notice.titulo}}</h1>
-        <img src="{{notice.imagen}}" alt="">
-        <h1 class="Texto">{{notice.texto}}</h1>
+    <ion-card *ngFor="let notice of notices; index as i;" class="cardNoticias">
+
+        <ion-card-header>
+            <ion-card-title style="color: #E2C0FC">{{notice.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+            <img src="{{notice.imagen}}" alt="">
+            <h1 class="Texto">{{notice.texto}}</h1>
+
+
+        </ion-card-content>
 
         <ion-item class="baseNoticias">
-            <ion-icon name="newspaper" class="baseIcon"></ion-icon>
-            <ion-label class="Fecha">{{notice.fecha}}</ion-label>
+            <ion-icon name="call"></ion-icon>
+            <ion-label>{{notice.fecha}}</ion-label>
 
-            <ion-button color="warning">
-                <ion-icon name="create"></ion-icon>
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
             </ion-button>
             <ion-button color="primary">
-                <ion-icon name="trash"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
             </ion-button>
-        </ion-item>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #F7CE4A; color: #AB8611;">Ver más
+                <ion-icon name="chevron-forward-circle" style="color:#AB8611"></ion-icon>
+            </ion-button>
 
+        </ion-item>
     </ion-card>
+
+
+
+
 
 
     <ion-fab vertical="center " horizontal="end " slot="fixed ">

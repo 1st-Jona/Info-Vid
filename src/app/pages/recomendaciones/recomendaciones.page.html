@@ -1,9 +1,55 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>recomendaciones</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+
+        <ion-title>
+            <ion-icon name="newspaper"></ion-icon> Noticias</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+    <ion-card *ngFor="let notice of notices; index as i;" class="cardNoticias">
+
+        <ion-card-header>
+            <ion-card-title style="color: #E2C0FC">{{notice.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+            <img src="{{notice.imagen}}" alt="">
+            <h1 class="Texto">{{notice.texto}}</h1>
+
+
+        </ion-card-content>
+
+        <ion-item class="baseNoticias">
+            <ion-icon name="call"></ion-icon>
+            <ion-label>{{notice.fecha}}</ion-label>
+
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #F7CE4A; color: #AB8611;">Ver más
+                <ion-icon name="chevron-forward-circle" style="color:#AB8611"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+
+
+
+
+
+    <ion-fab vertical="center " horizontal="end " slot="fixed ">
+        <ion-fab-button (click)="openNewNotice() ">
+            <ion-icon name="add "></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 
 </ion-content>
