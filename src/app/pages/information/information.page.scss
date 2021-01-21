@@ -1,0 +1,74 @@
+#logo {
+    width: 2pc;
+    margin-left: 1pc;
+    height: 2pc;
+}
+
+img {
+    width: 90%;
+}
+
+.cardNoticias {
+    --background: #E2C0FC;
+    margin: 5%;
+}
+
+.baseNoticias {
+    --background: #662D91;
+    color: white;
+}
+
+h1 {
+    color: black;
+    font-size: 150%;
+}
+
+.baseIcon {
+    color: white;
+    margin-right: 1%;
+}
+
+.cardSintomas {
+    --background: #BAE9FF;
+    margin: 5%;
+}
+
+.baseSintomas {
+    --background: #00acff;
+    color: white;
+}
+
+.cardCentrosAtencion {
+    --background: #F7CE4A;
+    margin: 5%;
+}
+
+.baseCentrosAtencion {
+    --background: #AB8611;
+    color: white;
+}
+
+.cardTodoSobreCovid {
+    --background: #24AAE4;
+    margin: 5%;
+}
+
+.baseTodoSobreCovid {
+    --background: #E33E24;
+    color: white;
+}
+
+.cardRecomendaciones {
+    --background: #95E384;
+    margin: 5%;
+}
+
+.baseRecomendaciones {
+    --background: #129633;
+    color: white;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}

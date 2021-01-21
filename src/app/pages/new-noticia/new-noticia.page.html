@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>newNoticia</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <form [formGroup]="myForm">
+            <ion-label style="font-size: 2pc;font-family:sans-serif;">Fecha</ion-label>
+            <ion-input formControlName="fecha" type="text" style="font-size: 1pc;"></ion-input>
+
+            <ion-label style="font-size: 2pc;font-family:sans-serif;">Imagen</ion-label>
+            <ion-input formControlName="imagen" type="text" style="font-size: 1pc;"></ion-input>
+
+            <ion-label style="font-size: 2pc;font-family:sans-serif;">Texto</ion-label>
+            <ion-input formControlName="texto" type="text" style="font-size: 1pc; font-family:sans-serif;"></ion-input>
+
+            <ion-label style="font-size: 2pc;font-family:sans-serif;">Titulo</ion-label>
+            <ion-input formControlName="titulo" type="text" style="font-size: 1pc;font-family:sans-serif;"></ion-input>
+
+            <ion-button (click)="addNew();" expand="block" color="secondary" style="font-size: 1pc;font-family:sans-serif;">
+                Agregar noticia
+            </ion-button>
+        </form>
+
+    </ion-card>
+
+
+
+</ion-content>

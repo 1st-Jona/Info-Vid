@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
         <ion-row>
-            <ion-icon name="pricetags-outline" id="iconTitle"></ion-icon>
+            <img src="https://i.ibb.co/2Nzw2G1/Recurso-4-3x.png" alt="" id=logo>
             <ion-title>
-                Bienvenido
+                Inicio
             </ion-title>
         </ion-row>
 
@@ -11,29 +11,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-    <div id=buttons>
-
-        <ion-button size="large" (click)=openProducts()>
-            <div>
-                <ion-icon name="bag-handle-outline"></ion-icon>
-                <p>Productos</p>
-            </div>
-        </ion-button>
-        <img src="https://image.freepik.com/vector-gratis/tienda-online-tienda-comercio-electronico-venta-msacot-logo-lindo_8169-157.jpg" alt="">
-        <ion-button size="large" color="light" (click)=openCar()>
-            <div>
-                <ion-icon name="cart-outline"></ion-icon>
-                <p>Carrito</p>
-            </div>
-        </ion-button>
-
-
+    <div id="imgInicio">
+        <img src="https://i.ibb.co/FsyL5Gt/Recurso-3-3x.png" alt="" id=inicio>
     </div>
 
+    <div id=botones>
 
 
+        <ion-button (click)=openProducts() id=tienda>
+            <div>
+                <img src="https://i.ibb.co/hR9sXC5/Recurso-2-3x.png" alt="">
+            </div>
+        </ion-button>
 
+        <ion-button (click)=openCar() id=informacion>
+            <div>
+                <img src="https://i.ibb.co/64txjbM/INFORMACION-3x.png" alt="">
+            </div>
+        </ion-button>
+
+    </div>
 
 
 

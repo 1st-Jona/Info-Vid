@@ -10,7 +10,7 @@ export class ProductService {
   private car: Product[] = new Array();
   constructor() {
       this.products.push({
-        photo: 'https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/889842640762_2.jpg',
+        photo: 'https://resources.claroshop.com/medios-plazavip/s2/10180/1473738/5ef2e5f7d60e7-1_cubrebocas-50-piezas-tricapa-1600x1600.jpg',
         name: 'Xbox Series X',
         description: 'Consola de Microsoft Xbox Series X 1TB.',
         cost: 13500
@@ -80,7 +80,7 @@ export class ProductService {
       });
    }
 
-   getProducts(): Product[] {
+   getProducts(): Product[] { 
     return this.products;
   }
   addToCar(pos: number){

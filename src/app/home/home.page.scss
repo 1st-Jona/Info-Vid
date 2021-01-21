@@ -2,35 +2,42 @@ ion-icon {
     font-size: 250%;
 }
 
-#iconTitle {
-    margin-left: 1%;
+#inicio {
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 1%;
 }
 
-img {
-    width: 35%;
-    height: auto;
-}
-
-#buttons {
-    margin-left: auto;
-    margin-right: auto;
+#botones {
     text-align: center;
-    width: auto;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+#imgInicio {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#informacion {
+    --background: #00ACFF;
+}
+
+#tienda {
+    --background: #455A64;
 }
 
 #logo {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    width: 3pc;
+    margin-left: 1pc;
+    height: 3pc;
 }
 
 ion-button {
     font-size: 90%;
-    width: 30%;
-    height: auto;
-    --background: #FF6B07;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 25pc;
+    height: 10pc;
 }
-
-p {}

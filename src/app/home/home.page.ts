@@ -14,6 +14,6 @@ export class HomePage {
     this.router.navigate(['/products']);
   }
   openCar(){
-    this.router.navigate(['/car']);
+    this.router.navigate(['/information']);
   }
 }

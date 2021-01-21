@@ -1,0 +1,204 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-row>
+            <ion-icon name="information-circle" id="logo"></ion-icon>
+            <ion-title>
+                Información
+            </ion-title>
+        </ion-row>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card class="cardNoticias">
+        <ion-card-header>
+            <ion-card-subtitle>Informate</ion-card-subtitle>
+            <ion-card-title style="color: #662D91;">Noticias sobre COVID-19</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row>
+                <ion-col> <img src="https://i.ibb.co/5h20LT8/Noticias-3x.png" alt=""></ion-col>
+                <ion-col>
+
+                    <h1>Es importane estar informado de las últimas noticias relacionadas con el COVID-19 asi que te invitamos estar informado consultando nuestra sección de noticas.</h1>
+
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+
+        <ion-item class="baseNoticias">
+            <ion-icon name="newspaper" class="baseIcon"></ion-icon>
+            <ion-label>Siguenos en nuestras redes sociales para más noticias.</ion-label>
+
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #E2C0FC; color: #662D91;" (click)="openNews()">Ver más
+                <ion-icon name="chevron-forward-circle" style="color: #662D91"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+    <ion-card class="cardSintomas">
+        <ion-card-header>
+            <ion-card-subtitle>Informate</ion-card-subtitle>
+            <ion-card-title style="color: #00acff;">Esté atento a los síntomas. </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row>
+
+                <ion-col>
+
+                    <h1>
+
+                    </h1>
+                    <h1>Los síntomas notificados por personas con COVID-19 varían desde aquellos que presentan síntomas leves hasta quienes se enferman gravemente. Los síntomas pueden aparecer de 2 a 14 días después de la exposición al virus. </h1>
+
+                </ion-col>
+                <ion-col> <img src="https://i.ibb.co/fvDmZ6Q/Sintomas-3x.png" alt=""></ion-col>
+            </ion-row>
+        </ion-card-content>
+
+        <ion-item class="baseSintomas">
+            <ion-icon name="eyedrop" class="baseIcon"></ion-icon>
+            <ion-label>Siguenos en nuestras redes sociales para más noticias.</ion-label>
+
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #BAE9FF; color: #00acff;" (click)="openSintomas()">Ver más
+                <ion-icon name="chevron-forward-circle" style="color:#00acff"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+    <ion-card class="cardCentrosAtencion">
+        <ion-card-header>
+            <ion-card-subtitle>Informate</ion-card-subtitle>
+            <ion-card-title style="color: #AB8611;">Centros de Atención para informarse acerca del virus.</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row>
+                <ion-col> <img src="https://i.ibb.co/YbgpwhH/c-atencion-3x.png" alt=""></ion-col>
+                <ion-col>
+
+                    <h1>Si necesitas ayuda y lo que necesitas es atención de cualquier tipo, ya sea atención informativa o médica puedes consultar información en este apartado</h1>
+
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+
+        <ion-item class="baseCentrosAtencion">
+            <ion-icon name="call"></ion-icon>
+            <ion-label> Si necesitas ayuda no dudes en contactar algún centro de atencion.</ion-label>
+
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #F7CE4A; color: #AB8611;">Ver más
+                <ion-icon name="chevron-forward-circle" style="color:#AB8611"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+    <ion-card class="cardRecomendaciones">
+        <ion-card-header>
+            <ion-card-subtitle>Informate</ion-card-subtitle>
+            <ion-card-title style="color: #129633;">Protéjase a sí mismo y a los demás contra la COVID-19. </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row>
+
+                <ion-col>
+
+                    <h1>
+
+                    </h1>
+                    <h1>Si la COVID-19 se propaga en su comunidad, manténgase seguro mediante la adopción de algunas sencillas medidas de precaución, por ejemplo, mantener el distanciamiento físico, llevar mascarilla, ventilar bien las habitaciones, evitar
+                        las aglomeraciones, lavarse las manos y, al toser, cubrirse la boca y la nariz con el codo flexionado o con un pañuelo. Consulte las recomendaciones locales del lugar en el que vive y trabaja. ¡Hágalo! </h1>
+
+                </ion-col>
+                <ion-col> <img src="https://i.ibb.co/TWGQnC2/TIPS-3x.png" alt=""></ion-col>
+            </ion-row>
+        </ion-card-content>
+
+        <ion-item class="baseRecomendaciones">
+            <ion-icon name="eyedrop" class="baseIcon"></ion-icon>
+            <ion-label>Siguenos en nuestras redes sociales para más noticias.</ion-label>
+
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #95E384; color: #129633;">Ver más
+                <ion-icon name="chevron-forward-circle" style="color:#129633"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+    <ion-card class="cardTodoSobreCovid">
+        <ion-card-header>
+            <ion-card-subtitle>Informate</ion-card-subtitle>
+            <ion-card-title style="color: #E33E24;">Todo Sobre Covid.</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row>
+                <ion-col> <img src="https://i.ibb.co/7KpktFS/TODOSOBRE-3x.png" alt=""></ion-col>
+                <ion-col>
+
+                    <h1>En este apartado puedes informarte sobre todos los datos generales en los que se ve relacionado Covid-19, algunas curiosidades así como algunas breves recomendaciones (Para más detalles visita el apartado de recomendaciones).</h1>
+
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+
+        <ion-item class="baseTodoSobreCovid">
+            <ion-icon name="call-outline"></ion-icon>
+            <ion-label> Si necesitas ayuda no dudes en contactar algún centro de atencion.</ion-label>
+
+            <ion-button color="danger">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button style="--background: #24AAE4; color: #E33E24;">Ver más
+                <ion-icon name="chevron-forward-circle" style="color:#E33E24"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+</ion-content>

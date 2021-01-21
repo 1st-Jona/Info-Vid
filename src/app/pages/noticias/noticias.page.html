@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+
+        <ion-title>
+            <ion-icon name="newspaper"></ion-icon> Noticias</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let notice of notices; index as i;">
+        <h1 class="Titulo">{{notice.titulo}}</h1>
+        <img src="{{notice.imagen}}" alt="">
+        <h1 class="Texto">{{notice.texto}}</h1>
+
+        <ion-item class="baseNoticias">
+            <ion-icon name="newspaper" class="baseIcon"></ion-icon>
+            <ion-label class="Fecha">{{notice.fecha}}</ion-label>
+
+            <ion-button color="warning">
+                <ion-icon name="create"></ion-icon>
+            </ion-button>
+            <ion-button color="primary">
+                <ion-icon name="trash"></ion-icon>
+            </ion-button>
+        </ion-item>
+
+    </ion-card>
+
+
+    <ion-fab vertical="center " horizontal="end " slot="fixed ">
+        <ion-fab-button (click)="openNewNotice() ">
+            <ion-icon name="add "></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
