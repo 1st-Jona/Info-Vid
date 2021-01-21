@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormBuilder } from '@angular/forms';
+import { SintomaService } from '../../services/sintoma.service';
+import { Sintoma } from '../../models/sintoma';
 
 @Component({
   selector: 'app-new-sintoma',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewSintomaPage implements OnInit {
 
-  constructor() { }
+  public myForm:FormGroup;
+  public sintoma:Sintoma;
+  
+
+  constructor(private sintomaService:SintomaService,private fb:FormBuilder) { }
 
   ngOnInit() {
+
+    this.myForm=this.fb.group({
+      frecuencia:[""],
+      imagen:[""],
+      nombre:[""]
+    });
   }
 
 }

@@ -21,7 +21,7 @@ public notices:Noticia[];
           titulo:e.payload.doc.get("titulo")
         }as Noticia
       })
-    })
+    });
   }
 
   ngOnInit() {
