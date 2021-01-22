@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RecomendacionService } from '../../services/recomendacion.service';
 import { Recomendacion } from '../../models/recomendacion';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-recomendaciones',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class RecomendacionesPage implements OnInit {
 
   public recomendacion: Recomendacion[];
-  constructor(private service:RecomendacionService,private r:Router) { 
+  constructor(private service:RecomendacionService,private r:Router, private toast:ToastController) { 
   
 
     this.service.getRecomendacion().subscribe(data =>{
@@ -29,6 +30,31 @@ export class RecomendacionesPage implements OnInit {
   }
   openNewRecomendacion(){
     this.r.navigate(['/new-recomendacion']);
+  }
+  
+
+  toFormulario(i:string){
+    let navext:NavigationExtras ={
+      queryParams:{
+        special:JSON.stringify(this.recomendacion[i]),id:this.recomendacion[i].id
+      }
+    };
+    this.r.navigate(['/new-recomendacion'],navext);
+  }
+
+
+  delete(id:string){
+    this.service.deleteRecomendacion(this.recomendacion[id].id);
+    this.presentToast();
+    this.r.navigate(['/recomendaciones']);
+  }
+
+  async presentToast(){
+    const t= await this.toast.create({
+      message: 'Recomendacion eliminada',
+      duration: 2000
+    });
+    t.present();
   }
 
 }

@@ -7,19 +7,18 @@
 </ion-header>
 
 <ion-content>
+    <div *ngFor="let notice of notices; index as i;" class="cardNoticias">
+        <ion-card>
 
-    <ion-card *ngFor="let notice of notices; index as i;" class="cardNoticias">
+            <ion-card-header>
+                <ion-card-title style="color: #E2C0FC">{{notice.titulo}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
 
-        <ion-card-header>
-            <ion-card-title style="color: #E2C0FC">{{notice.titulo}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-
-            <img src="{{notice.imagen}}" alt="">
-            <h1 class="Texto">{{notice.texto}}</h1>
-
-
-        </ion-card-content>
+                <img src="{{notice.imagen}}" alt="">
+                <h1>{{notice.texto}}</h1>
+            </ion-card-content>
+        </ion-card>
 
         <ion-item class="baseNoticias">
             <ion-icon name="call"></ion-icon>
@@ -39,7 +38,7 @@
             </ion-button>
 
         </ion-item>
-    </ion-card>
+    </div>
 
 
 

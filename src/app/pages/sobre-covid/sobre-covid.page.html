@@ -1,58 +1,62 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 <ion-header>
     <ion-toolbar>
+        <ion-row>
+            <ion-button style="margin-left: 1pc;" class="botonRegreso">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </ion-button>
+            <ion-title>
+                <ion-icon name="chatbubbles" class="iconoPrincipal"></ion-icon> Todo Sobre Covid</ion-title>
+        </ion-row>
 
-        <ion-title>
-            <ion-icon name="newspaper"></ion-icon> Noticias</ion-title>
+
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-card *ngFor="let notice of notices; index as i;" class="cardNoticias">
+    <ion-card *ngFor="let sobrecovid of sobreCovids; index as i;" class="cardSobreCovid">
 
         <ion-card-header>
-            <ion-card-title style="color: #E2C0FC">{{notice.titulo}}</ion-card-title>
+            <ion-card-title style="color:white;">{{sobrecovid.titulo}}</ion-card-title>
         </ion-card-header>
+
         <ion-card-content>
 
-            <img src="{{notice.imagen}}" alt="">
-            <h1 class="Texto">{{notice.texto}}</h1>
+            <ion-row>
+                <ion-col>
 
+                    <img class="avatar" src="{{sobrecovid.imagen}}" alt="">
+                </ion-col>
+                <ion-col>
 
+                    <h1 class="texto">{{sobrecovid.descripcion}}</h1>
+
+                </ion-col>
+            </ion-row>
         </ion-card-content>
 
-        <ion-item class="baseNoticias">
-            <ion-icon name="call"></ion-icon>
-            <ion-label>{{notice.fecha}}</ion-label>
+        <ion-item class="baseSobreCovid">
+            <ion-icon name="call" class="iconoBase"></ion-icon>
+            <ion-label> Si necesitas ayuda no dudes en contactar algún centro de atencion.</ion-label>
 
-            <ion-button color="danger">
-                <ion-icon name="logo-youtube"></ion-icon>
+            <ion-button color="warning">
+                <ion-icon name="create"></ion-icon>
             </ion-button>
-            <ion-button color="primary">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </ion-button>
-            <ion-button color="secondary">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </ion-button>
-            <ion-button style="--background: #F7CE4A; color: #AB8611;">Ver más
-                <ion-icon name="chevron-forward-circle" style="color:#AB8611"></ion-icon>
+
+            <ion-button color="primary" (click)="delete(i)">
+                <ion-icon name="trash"></ion-icon>
             </ion-button>
 
         </ion-item>
     </ion-card>
 
 
-
-
-
-
-    <ion-fab vertical="center " horizontal="end " slot="fixed ">
-        <ion-fab-button (click)="openNewNotice() ">
-            <ion-icon name="add "></ion-icon>
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="openNewSobreCovid()">
+            <ion-icon name="add" style="color:white;"></ion-icon>
         </ion-fab-button>
     </ion-fab>
-
-</ion-content>fab-button>
-</ion-fab>
 
 </ion-content>

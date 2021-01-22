@@ -16,6 +16,9 @@ export class SobreCovidService {
   getSobreCovid(){
     return this.firestore.collection('sobreCovid').snapshotChanges();
   }
+  deleteSobreCovid(id:string){
+    this.firestore.doc('sobreCovid/'+id).delete();
+  }
 
 
 }

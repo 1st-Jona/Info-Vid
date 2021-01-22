@@ -1,9 +1,46 @@
-.cardNoticias {
-    --background: #E2C0FC;
+.cardSobreCovid {
+    --background: #24AAE4;
     margin: 5%;
 }
 
-.baseNoticias {
-    --background: #662D91;
+.texto {
+    text-align: justify;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 200%;
+    color: black;
+}
+
+.baseSobreCovid {
+    --background: #E33E24;
     color: white;
+}
+
+.iconoPrincipal {
+    color: #E33E24;
+    font-size: 1.5pc;
+}
+
+.botonRegreso {
+    color: white;
+    --background: #24AAE4;
+    height: 1.5pc;
+}
+
+ion-fab-button {
+    --background: #E33E24;
+}
+
+.iconoBase {
+    color: white;
+    margin-right: 1pc;
+}
+
+ion-card-title {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 300%;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 15px;
 }

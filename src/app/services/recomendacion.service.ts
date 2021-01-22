@@ -15,4 +15,10 @@ export class RecomendacionService {
   getRecomendacion(){
     return this.firestore.collection('recomendaciones').snapshotChanges();
   }
+  deleteRecomendacion(id: string){
+    this.firestore.doc('recomendaciones/'+id).delete();
+  }
+  updateRecomendacion(recomendacion: Recomendacion, id: string){
+    this.firestore.doc('recomendaciones/'+id).update(recomendacion);
+  }
 }

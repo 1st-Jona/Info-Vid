@@ -20,9 +20,16 @@ export class NewSintomaPage implements OnInit {
 
     this.myForm=this.fb.group({
       frecuencia:[""],
-      imagen:[""],
       nombre:[""]
     });
+  }
+  create(){
+    this.sintoma = {
+      frecuencia: this.myForm.controls.frecuencia.value,
+      nombre: this.myForm.controls.nombre.value
+
+    }
+    this.sintomaService.createSintoma(this.sintoma);
   }
 
 }
