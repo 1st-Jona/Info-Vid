@@ -1,0 +1,26 @@
+ion-card {
+    --background: #F7CE4A;
+    margin: 5%;
+    padding: 3%;
+}
+
+ion-label {
+    color: #AB8611;
+}
+
+ion-input {
+    --background: #AB8611;
+    border-radius: 3px;
+    color: white;
+}
+
+ion-icon {
+    margin-left: 1pc;
+    font-size: 2pc;
+}
+
+ion-button {
+    margin-top: 1pc;
+    --background: #AB8611;
+    color: #F7CE4A;
+}

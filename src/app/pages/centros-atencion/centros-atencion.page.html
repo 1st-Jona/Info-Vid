@@ -1,9 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>centrosAtencion</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+
+        <ion-title>
+            <ion-icon name="business"></ion-icon> Centros de atención
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-card class='cardCentrosAtencion' *ngFor="let center of centers; index as i;">
+        <h1 class="Titulo" style="font-size: 1pc;">{{center.nombreLugar}}</h1>
+        <img src="{{center.imagen}}" alt="">
+        <h1 class="Texto">Dirección: <strong>{{center.direccion}}</strong></h1>
+        <h1 class="Texto">Correo:<strong>{{center.correo}}</strong> </h1>
+        <h1 class="Texto">Teléfono:<strong> {{center.telefono}}</strong></h1>
+
+        <ion-item class="baseCentrosAtencion">
+            <ion-icon name="business" style="color: white;"></ion-icon>
+            <ion-button color="warning" (click)="updateCenter(i)" slot="end">
+                <ion-icon name="create"></ion-icon>
+            </ion-button>
+            <ion-button color="primary" (click)="deleteCentro(i)" slot="end">
+                <ion-icon name="trash"></ion-icon>
+            </ion-button>
+        </ion-item>
+
+    </ion-card>
+
+    <ion-fab vertical="center" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="openNewCenter() ">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 
 </ion-content>

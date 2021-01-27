@@ -29,4 +29,7 @@ export class InformationPage implements OnInit {
   openSobreCovid(){
     this.router.navigate(['/sobre-covid']);
   }
+  openCentrosAtencion(){
+    this.router.navigate(['/centros-atencion']);
+  }
 }
