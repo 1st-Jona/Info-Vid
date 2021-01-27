@@ -1,32 +1,39 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            <ion-icon name="newspaper"></ion-icon> Recomendaciones </ion-title>
+            <ion-icon name="eyedrop-outline"></ion-icon> Recomendaciones </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
     <ion-card *ngFor="let recomendacion of recomendacion; index as i;">
-        <img src="{{recomendacion.imagen}}" alt="">
-        <h1 class="Informacion">{{recomendacion.informacion}}</h1>
+        <ion-row>
+            <ion-col> <img src="{{recomendacion.imagen}}" alt="">
 
-        <ion-item class="baseSobreInformacion">
-            <ion-icon name="newspaper" class="baseIcon"></ion-icon>
+                <h1 class="Informacion">{{recomendacion.informacion}}</h1>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-item class="baseRecomendaciones" style="width:100%;">
 
-            <ion-button color="warning" (click)="toFormulario(i)">
-                <ion-icon name="create"></ion-icon>
-            </ion-button>
+                <ion-button color="warning" (click)="toFormulario(i)" vertical="center" horizontal="end" slot="end">
+                    <ion-icon name="create"></ion-icon>
+                </ion-button>
 
-            <ion-button color="primary" (click)="delete(i)">
-                <ion-icon name="trash"></ion-icon>
-            </ion-button>
-        </ion-item>
+                <ion-button color="primary" (click)="delete(i)" vertical="center" horizontal="end" slot="end">
+                    <ion-icon name="trash"></ion-icon>
+                </ion-button>
+            </ion-item>
+        </ion-row>
+
+
+
 
     </ion-card>
 
 
-    <ion-fab vertical="center " horizontal="end " slot="fixed ">
+    <ion-fab vertical="end" horizontal="end" slot="fixed">
         <ion-fab-button (click)="openNewRecomendacion()">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SobreCovidService } from '../../services/sobre-covid.service'
 import { SobreCovid } from 'src/app/models/sobre-covid';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -39,9 +39,19 @@ export class SobreCovidPage implements OnInit {
     this.r.navigate(['/sobre-covid']);
   }
 
+  
+  toFormulario(i:string){
+    let navext:NavigationExtras ={
+      queryParams:{
+        special:JSON.stringify(this.sobreCovids[i]),id:this.sobreCovids[i].id
+      }
+    };
+    this.r.navigate(['/new-sobre-covid'],navext);
+  }
+
   async presentToast(){
     const t= await this.toast.create({
-      message: 'Recomendacion eliminada',
+      message: 'Información eliminada',
       duration: 2000
     });
     t.present();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { SintomaService } from '../../services/sintoma.service'
 import { Sintoma } from 'src/app/models/sintoma';
@@ -21,19 +21,28 @@ export class SintomasPage implements OnInit {
           nombre:e.payload.doc.get("nombre")
         }as Sintoma;
       })
-    });    
+    });     
   }
 
   ngOnInit() {
   }
   openNewSintoma(){
-    this.r.navigate(['/new-sintomas']);
+    this.r.navigate(['/new-sintoma']);
   }
 
   delete(id:string){
     this.service.deleteSintoma(this.sintoma[id].id);
     this.presentToast();
     this.r.navigate(['/sintomas']);
+  }
+
+  toFormulario(i:string){
+    let navext:NavigationExtras ={
+      queryParams:{
+        special:JSON.stringify(this.sintoma[i]),id:this.sintoma[i].id
+      }
+    };
+    this.r.navigate(['/new-sintoma'],navext);
   }
 
   async presentToast(){

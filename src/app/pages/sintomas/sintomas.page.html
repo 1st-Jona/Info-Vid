@@ -1,32 +1,51 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            <ion-icon name="newspaper"></ion-icon> Sintomas </ion-title>
+            <ion-icon name="pulse-outline"></ion-icon> Sintomas </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
     <ion-card *ngFor="let sintoma of sintoma; index as i;">
-        <h1 class="Frecuencia">{{sintoma.frecuencia}}</h1>
-        <h1 class="Nombre">{{sintoma.nombre}}</h1>
+        <ion-row style="justify-content: center; align-items: center; ">
+            <ion-col size="2">
+                <ion-chip *ngIf='this.sintoma.frecuencia=="grave"' color="danger">
+                    <ion-icon name="pulse-outline"></ion-icon>
+                    <ion-label>{{sintoma.frecuencia}}</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf='this.sintoma.frecuencia=="habitual"' color="warning">
+                    <ion-icon name="pulse-outline"></ion-icon>
+                    <ion-label>{{sintoma.frecuencia}}</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf='this.sintoma.frecuencia=="menos frecuente"' color="success">
+                    <ion-icon name="pulse-outline"></ion-icon>
+                    <ion-label>{{sintoma.frecuencia}}</ion-label>
+                </ion-chip>
+            </ion-col>
+            <ion-col>
+                <h1 class="Nombre">{{sintoma.nombre}}</h1>
+            </ion-col>
+            <ion-col style="text-align: right;">
+                <ion-button color="warning" (click)="toFormulario(i)">
+                    <ion-icon name="create"></ion-icon>
+                </ion-button>
 
-        <ion-item class="baseSintoma">
-            <ion-icon name="newspaper" class="baseIcon"></ion-icon>
+                <ion-button color="primary" (click)="delete(i)">
+                    <ion-icon name="trash"></ion-icon>
+                </ion-button>
+            </ion-col>
 
-            <ion-button color="warning">
-                <ion-icon name="create"></ion-icon>
-            </ion-button>
 
-            <ion-button color="primary" (click)="delete(i)">
-                <ion-icon name="trash"></ion-icon>
-            </ion-button>
-        </ion-item>
+
+
+        </ion-row>
+
 
     </ion-card>
 
 
-    <ion-fab vertical="center " horizontal="end " slot="fixed ">
+    <ion-fab vertical="center" horizontal="end" slot="fixed">
         <ion-fab-button (click)="openNewSintoma()">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>

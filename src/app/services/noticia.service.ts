@@ -15,4 +15,12 @@ export class NoticiaService {
   getNew(){
     return this.firestore.collection('noticias').snapshotChanges();
   }
+
+  deleteNoticia(id:string){
+    this.firestore.doc('noticias/'+id).delete();
+  }
+  updateNoticia(noticia: Noticia, id: string){
+    this.firestore.doc('noticias/'+id).update(noticia);
+  }
 }
+ 

@@ -22,9 +22,12 @@
             <ion-label style="font-size: 2pc;font-family:sans-serif;">Descripción</ion-label>
             <ion-input formControlName="descripcion" type="text" style="font-size: 1pc; font-family:sans-serif;" placeholder="Introduzca la Descripción."></ion-input>
 
-            <ion-button (click)="create();" expand="block" style="font-size: 1pc;font-family:sans-serif;">
-
-                Agregar nuevo dato
+            <ion-button *ngIf="upl" (click)="update()" expand="block" style="font-size: 1pc;font-family:sans-serif;">
+                Actualizar Recomendacion
+                <ion-icon name="save"></ion-icon>
+            </ion-button>
+            <ion-button *ngIf="add" (click)="create();" expand="block" style="font-size: 1pc;font-family:sans-serif;">
+                Agregar Recomendacion
                 <ion-icon name="save"></ion-icon>
             </ion-button>
         </form>

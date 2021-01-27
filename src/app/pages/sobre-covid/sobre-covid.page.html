@@ -3,9 +3,6 @@
 <ion-header>
     <ion-toolbar>
         <ion-row>
-            <ion-button style="margin-left: 1pc;" class="botonRegreso">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-            </ion-button>
             <ion-title>
                 <ion-icon name="chatbubbles" class="iconoPrincipal"></ion-icon> Todo Sobre Covid</ion-title>
         </ion-row>
@@ -41,7 +38,7 @@
             <ion-icon name="call" class="iconoBase"></ion-icon>
             <ion-label> Si necesitas ayuda no dudes en contactar algún centro de atencion.</ion-label>
 
-            <ion-button color="warning">
+            <ion-button color="warning" (click)="toFormulario(i)">
                 <ion-icon name="create"></ion-icon>
             </ion-button>
 

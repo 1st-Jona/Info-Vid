@@ -11,73 +11,32 @@ export class ProductService {
   constructor() {
       this.products.push({
         photo: 'https://resources.claroshop.com/medios-plazavip/s2/10180/1473738/5ef2e5f7d60e7-1_cubrebocas-50-piezas-tricapa-1600x1600.jpg',
-        name: 'Xbox Series X',
-        description: 'Consola de Microsoft Xbox Series X 1TB.',
-        cost: 13500
+        name: 'Cubre Bocas Clínico',
+        description: 'Cubrebocas clínico con filtro',
+        cost: 10
       });
 
       this.products.push({
-        photo: 'https://s.alicdn.com/@sc01/kf/H5437a807293e48d9b3ae3463849d5b66u.jpg_300x300.jpg',
-        name: 'PlayStation 5',
-        description: 'Consola de Sony PS5 1TB.',
-        cost: 14500
+        photo: 'https://www.chedraui.com.mx/medias/7501199425221-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTI0MjYyfGltYWdlL2pwZWd8aDQyL2hmMC8xMDU4MjM5ODgyODU3NC5qcGd8ZWFlMGEwMGM5NTdjYzU3ZTA4NmVkYTU1NGYzNjExYjczNGI1MzI1NzJhMjg1ZWE4ZGYyYzZlODI5ZmE3ODJhYw',
+        name: 'Gel antibacterial Dial',
+        description: 'Gel Dial 500 ml',
+        cost: 30
       });
 
       this.products.push({
-        photo: 'https://http2.mlstatic.com/D_NQ_NP_939588-MLA41153364520_032020-O.jpg',
-        name: 'Nintendo Switch Lite',
-        description: 'Consola portátil Nintendo Switch Lite 32 GB.',
-        cost: 8500
+        photo: 'https://www.chedraui.com.mx/medias/7501058752796-00-CH515Wx515H?context=bWFzdGVyfHJvb3R8NjQ3OTh8aW1hZ2UvanBlZ3xoYjQvaDc4LzEwNTk1NTM5NTgzMDA2LmpwZ3w3YWJlZDVjN2UyMmE1ZjFiOThmYjU0MWEwMGMzMWEzNjcxMTBiYmFkOGQ2ZDUzZTgyYzllYWQ4MWM0ZDA3YTdj',
+        name: 'Desinfectante Lysol',
+        description: 'Desinfectante Lysol 475 ml',
+        cost: 50
       });
 
       this.products.push({
-        photo: 'https://www.soriana.com/medias/sys_master/images/images/hab/h7d/9085896491038.jpg',
-        name: 'Smart TV Samsung',
-        description: 'Pantalla smart TV 4k UHD LED marca Samsung de 43 pulgadas.',
-        cost: 10000
+        photo: 'https://www.superama.com.mx/Content/images/products/img_large/0750112510434L.jpg',
+        name: 'Electrolit',
+        description: 'Elctrolit de 625 ml',
+        cost: 20
       });
 
-      this.products.push({
-        photo: 'https://target.scene7.com/is/image/Target/GUEST_7c6bdc74-fa86-4687-9c79-17e475b96be3?wid=488&hei=488&fmt=pjpeg',
-        name: 'Amazon Echo Dot',
-        description: 'Asistente de Alexa Amazon Echo Dot de 4ta generación.',
-        cost: 750
-      });
-
-      this.products.push({
-        photo: 'https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/mg/gm/3pp/asr/039d2fbc-6939-4efa-b33e-8e931d0f48d1_1.6d1667b75b6b556a14d9bf88458cc717.jpeg?odnHeight=2000&odnWidth=2000&odnBg=ffffff',
-        name: 'Sonos One SL',
-        description: 'Bocina inteligente para música marca Sonos.',
-        cost: 3000
-      });
-
-      this.products.push({
-        photo: 'https://media.kingston.com/hyperx/product/hx-product-headset-cloud-flight-s-hxhscfssgww-1-zm-lg.jpg',
-        name: 'HyperX Cloud Fight S',
-        description: 'Audífonos para gaming marca HyperX con sonido Dolby Digital Surround.',
-        cost: 4750
-      });
-
-      this.products.push({
-        photo: 'https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/7503024407990_3.jpg',
-        name: 'Paquete Stephen King 2018',
-          description: 'Colección de novelas del autor Stephen King. 7 libros incluidos.',
-        cost: 1200
-      });
-
-      this.products.push({
-        photo: 'https://deskcom.com.mx/wp-content/uploads/2018/06/Untitled-2.png',
-        name: 'Dell Latitude 3470',
-        description: 'Laptop Dell Latitude 3 con 1TB de DD y 256 GB en SSD, intel core i5 de 9na Generación.',
-        cost: 13500
-      });
-
-      this.products.push({
-        photo: 'https://www.caseking.de/media/image/gcas-398_gcas_398_01.jpg',
-        name: 'Nvidia Geforce RTX 3090',
-        description: 'Tarjeta de video Nvidia  Geforce RTX 3090 marca ASUS TUF Gaming con soporte Ray Traicing.',
-        cost: 14500
-      });
    }
 
    getProducts(): Product[] { 

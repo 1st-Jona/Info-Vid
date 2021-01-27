@@ -11,13 +11,16 @@ export class SobreCovidService {
   createSobreCovid(sobreCovid:SobreCovid){
     return this.firestore.collection('sobreCovid').add(sobreCovid);
   
-  }
+  } 
 
   getSobreCovid(){
     return this.firestore.collection('sobreCovid').snapshotChanges();
   }
   deleteSobreCovid(id:string){
     this.firestore.doc('sobreCovid/'+id).delete();
+  }
+  updateSobreCovid(sc: SobreCovid, id: string){
+    this.firestore.doc('sobreCovid/'+id).update(sc);
   }
 
 
